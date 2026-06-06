@@ -1,0 +1,165 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOkD2ggiLSCBo3eRiZqiK1C",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/rafahcs/Projeto_AF_MT/blob/main/projetoMT\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# 1. Introdução\n",
+        "− Linguagem escolhida  \n",
+        "  Linguagem dos Grafos Bipartidos (LGB)  \n",
+        "  Descrição: Conjunto de grafos que são bipartidos  \n",
+        "  Exemplo válido: V={1,2,3,4};E={(1,2),(2,3),(3,4)} (grafo caminho)  \n",
+        "  Exemplo inválido: V={1,2,3};E={(1,2),(2,3),(3,1)} (triângulo)  \n",
+        "− Motivação"
+      ],
+      "metadata": {
+        "id": "9O5LhEAJBDij"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# 2. Definição Formal da Máquina de Turing\n",
+        "− 7−upla completa  \n",
+        "− Diagrama de estados (opcional)"
+      ],
+      "metadata": {
+        "id": "M1010bmBBPz4"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# 3. Implementação"
+      ],
+      "metadata": {
+        "id": "LVshAyVEBa3d"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "1y2_m1ld_Q1X"
+      },
+      "outputs": [],
+      "source": [
+        "class TuringMachine:\n",
+        "delta : Dict [( str , str ) , (str , str , str )] = None\n",
+        "def __init__ ( self , tape ):\n",
+        "# Inicialização\n",
+        "def step( self ):\n",
+        "” ” ”\n",
+        "Executa um passo da MT, caso possível\n",
+        "Retorna : keep_running\n",
+        "” ” ”\n",
+        "return keep_running\n",
+        "def execute( self , step_limit=300000):\n",
+        "” ” ”\n",
+        "Executa a MT para s fita fornecida até o limite máximo\n",
+        "Retorna : (accept , steps , final_tape )\n",
+        "” ” ”\n",
+        "return accept , steps , final_tape"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Requisitos da Implementação:  \n",
+        "1. Sistema de fita infinita (simulado com lista expansível);  \n",
+        "2. Contador de passos (cada transição conta como 1 passo);  \n",
+        "3. Detectação de loops infinitos (limite de passos configurável);  \n",
+        "4. Função para gerar instâncias de teste automáticas."
+      ],
+      "metadata": {
+        "id": "HmEXQrkMCMVn"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# 4. Testes e Validação\n",
+        "Crie testes unitários para:\n",
+        "  1. Instâncias pequenas;\n",
+        "  2. Instâncias inválidas malformadas;\n",
+        "  3. Casos óbvios de aceitação/rejeição.  \n",
+        "\n",
+        "-Verificação de correção"
+      ],
+      "metadata": {
+        "id": "QK2iaeWYCXUB"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# 5. ANÁLISE DE COMPLEXIDADE  \n",
+        "Realizar a análise da complexidade de tempo da MT definida. A análise deverá\n",
+        "apresentar os itens obrigatórios:  \n",
+        "  a. Gerador de Instâncias: Criar uma função que gera instâncias de tamanho\n",
+        "  𝑛 da linguagem.\n",
+        "  b. Faixadetamanhos: Gerarinstânciasdeaomenos10tamanhosdiferentes\n",
+        "  (ex.: 𝑛 ∈ {5,10,15,20,25,30,40,50,80,100}).\n",
+        "  c. Múltiplas execuções: realizar 10 execuções por tamanho.  \n",
+        "\n",
+        "− Funções de medição  \n",
+        "− Gráficos e tabelas   \n",
+        "  Visualizações obrigatórias:  \n",
+        "  a. Gráfico Passos vs Tamanho (com barras de erro).  \n",
+        "  b. Identifique o padrão (linear, quadrático, exponencial);  \n",
+        "  c. Tabela comparativa de complexidade teórica vs empírica  "
+      ],
+      "metadata": {
+        "id": "KiSwoOd-CjS2"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "6. DISCUSSÃO  \n",
+        "− Análise dos resultados  \n",
+        "− Comparação com complexidade teórica  \n",
+        "− Dificuldades encontradas  "
+      ],
+      "metadata": {
+        "id": "iUYIE9PQGMUe"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "7. CONCLUSÃO  \n",
+        "− Principais aprendizados  \n",
+        "− Limitações do estudo"
+      ],
+      "metadata": {
+        "id": "_qm6PhZ3GNaZ"
+      }
+    }
+  ]
+}
